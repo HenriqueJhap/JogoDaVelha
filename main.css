@@ -1,0 +1,268 @@
+:root{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: #f4f4f4;
+}
+
+.inicio{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+
+    background-color: #e48885;
+
+    height: 80%;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+.titulo h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.titulo h2{
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #111;
+}
+
+.inputs-jogador h2{
+    font-size: 2.4rem;
+    color: #ccc;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+.input-group label{
+    font-size: 2rem;
+}
+
+.input-group select, .input-group input {
+    background: #ccc;
+
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.input-nome-group{
+    margin-bottom: 1rem;
+}
+
+.input-group input{
+    width: 20rem;
+    height: 3rem;
+  
+    margin-left: 3rem;
+    font-size: 1.8rem;
+}
+
+.input-group select{
+    width: 6rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.inicio button{    
+    width: 100%;
+    height: 4rem;
+
+    font-size: 2.4rem;
+    text-align: center;
+    color: #fff;
+
+    background-color: #34f84e;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.inicio button:hover{
+    opacity: 0.8;
+}
+
+.historico{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    height: 80%;
+    width: 50%;
+
+    background-color: #d4d4d4;
+
+    border-radius: 5px;
+    padding: 3rem;
+    margin-left: 1rem;
+}
+
+.historico h1{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.historico .container-table{
+    height: 70%;
+    overflow-y: auto;
+}
+
+.historico table tr td{
+    height: 4rem;
+    width: 15rem;
+
+    text-align: center;
+    font-size: 2rem;
+}
+.historico table tr:first-child td{
+    font-weight: bolder;
+    border-bottom: 1px solid #000;
+}
+
+.historico table tr:not(:first-child):nth-child(2n) td{
+    background-color:#b4b4b4;
+}
+
+.historico button{
+    margin-top: 2rem;
+    
+    width: 100%;
+    height: 4rem;
+    font-size: 2.4rem;
+    text-align: center;
+    background-color: rgb(226, 46, 46);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.jogo-content{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80%;
+    background-color: #e48885;
+    padding: 2rem;
+    border-radius: 2px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.jogo-content table tr td{
+    height: 10rem;
+    width: 10rem;
+   
+    text-align: center;
+    font-size: 5rem;
+}
+
+.jogo-content table tr:first-child td, .jogo-content table tr:nth-child(2) td{
+    border-bottom: 1px solid #fff;
+}
+ 
+.jogo-content table tr td:first-child{
+    border-right: 1px solid #fff;
+}
+ 
+.jogo-content table tr td:nth-child(2){
+    border-right: 1px solid #fff;
+}
+
+.jogo-content label[id="versus"]{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3rem;    
+}
+
+.jogo-content label[id="jogadorDaVez"]{
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #111;
+}
+
+.jogo-content button{
+    width: 100%;
+    height: 4rem;
+    font-size: 2.4rem;
+    text-align: center;
+    background-color: rgb(226, 46, 46);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.placar{
+    display: none;
+    align-items: flex-start;
+    justify-content: flex-start ;
+    flex-direction: column;
+    height: 80%;
+    background-color: #d4d4d4;
+    border-radius: 2px;
+    width: 30%;
+    padding: 2rem;
+}
+
+.placar h1{
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+    margin-bottom: 2rem;
+}
+
+.placar .informacoes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #111;
+}
+.informacoes label{
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+}
+.informacoes label:nth-child(2n +1){
+    background-color: #b4b4b4;
+}

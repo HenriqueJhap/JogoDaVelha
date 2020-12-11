@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="preencherTabela()">
+    <div class="container">
+        <form class="inicio" action="javascript:void(0)" onsubmit="salvarJogadores()">
+            <div class="titulo">
+                <h1>Jogo da Velha</h1>
+                <h2>Sejam Bem Vindos</h2>
+            </div>
+            
+            <div class="inputs-jogador">
+                <h2>Jogador 1</h2>
+                <div class="input-group input-nome-group">
+                    <label >Nome: </label>
+                    <input class="jogador1" type="text" required>
+                </div>
+                
+                <div class="input-group input-simbolo-group">
+                    <label >Simbolo: </label>
+                    <select class="jogador1">
+                        <option value="X">X</option>
+                        <option value="0">0</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="inputs-jogador">
+                <h2>Jogador 2</h2>
+                <div class="input-group input-nome-group">
+                    <label >Nome: </label>
+                    <input class="jogador2"  type="text" required>
+                </div>
+                <div class="input-group input-simbolo-group">
+                    <label >Simbolo: </label>
+                    <select class="jogador2" >
+                        <option value="0">0</option>
+                        <option value="X">X</option>
+                    </select>
+                </div>
+            </div> 
+            
+            <button type="submit">Jogar</button>
+        </form>
+
+        <div class="historico">
+            <h1>Historico</h1>
+            <div class="container-table">
+                <table id="table-historico">
+                    <tr>
+                        <td>N° da Partida</td>
+                        <td>Jogador1</td>
+                        <td>Jogador2</td>
+                        <td>Resultado</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <button onclick="reiniciarHistorico()">Reiniciar Historico</button>
+        </div>
+
+        <div class="jogo-content">
+           
+            <label id="versus"></label>
+            <label id="jogadorDaVez"></label>
+            <table>
+                <tr>
+                    <td id="1" onclick="fazerJogada('1')"></td>
+                    <td id="2" onclick="fazerJogada('2')"></td>
+                    <td id="3" onclick="fazerJogada('3')"></td>
+                </tr>
+                <tr>
+                    <td id="4" onclick="fazerJogada('4')"></td>
+                    <td id="5" onclick="fazerJogada('5')"></td>
+                    <td id="6" onclick="fazerJogada('6')"></td>
+                </tr>
+                <tr>
+                    <td id="7" onclick="fazerJogada('7')"></td>
+                    <td id="8" onclick="fazerJogada('8')"></td>
+                    <td id="9" onclick="fazerJogada('9')"></td>
+                </tr>
+            </table>
+
+            <button onClick="window.location.reload()">Mudar Jogadores</button>
+        </div>
+        
+        <div class="placar">
+            <h1>Placar</h1>
+            <div class="informacoes">
+                <label id="rodadasJogadas"></label>
+                <label id="vitoriasJogador1"></label>
+                <label id="vitoriasJogador2"></label>
+                <label id="empates"></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
